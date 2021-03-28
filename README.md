@@ -5,4 +5,5 @@
 - [1장. 들어가기](./seungho.lee/ch01/SUMMARY.md)
 - [2장. 객체 지향](./seungho.lee/ch02/SUMMARY.md)
 - [3장. 다형성과 추상 타입](./seungho.lee/ch03/SUMMARY.md)
+- [5장. 설계 원칙: SOLID](./seungho.lee/ch05/SUMMARY.md)
 - [6장. DI와 서비스 로케이터](./seungho.lee/ch06/SUMMARY.md)
