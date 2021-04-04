@@ -7,3 +7,4 @@
 - [3장. 다형성과 추상 타입](./seungho.lee/ch03/SUMMARY.md)
 - [5장. 설계 원칙: SOLID](./seungho.lee/ch05/SUMMARY.md)
 - [6장. DI와 서비스 로케이터](./seungho.lee/ch06/SUMMARY.md)
+- [7장. 주요 디자인 패턴](./seungho.lee/ch07/SUMMARY.md)
