@@ -4,8 +4,9 @@
 package study;
 
 public class App {
+
   public String getGreeting() {
-    return "Hello World!";
+    return "Hello Design Patterns!";
   }
 
   public static void main(String[] args) {

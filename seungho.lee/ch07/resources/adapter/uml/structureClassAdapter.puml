@@ -1,0 +1,35 @@
+@startuml
+
+class WebSearchRequestHandler {
+}
+note top
+  클라이언트
+end note
+
+interface SearchService {
+  +search()
+}
+note top
+  클라이언트가
+  요구하는 인터페이스
+end note
+
+class SearchServiceTolrAdapter {
+  +search()
+}
+note bottom
+  어댑터(Adapter)
+end note
+
+class TolrClient {
+  +query()
+}
+note bottom
+  어댑티(Adaptee)
+end note
+
+WebSearchRequestHandler -right-> SearchService
+SearchServiceTolrAdapter .up.|> SearchService
+SearchServiceTolrAdapter -right-|> TolrClient
+
+@enduml

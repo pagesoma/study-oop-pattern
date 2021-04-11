@@ -1,0 +1,39 @@
+@startuml
+
+class ListUI {
+}
+
+interface Image {
+  +draw()
+}
+note right
+  이미지를 표현하며
+  ListUI는 Image 타입을 이용해서
+  화면에 이미지를 표시한다.
+end note
+
+class ProxyImage {
+  -real: RealImage
+  +draw()
+}
+note bottom
+  프록시 역할
+
+end note
+
+class RealImage {
+  +draw()
+}
+note right
+  실제로 이미지 데이터를 로딩해서
+  메모리에 보관하는 콘크리트 클래스
+end note
+
+ListUI .right.> Image
+
+ProxyImage .right. RealImage
+Image <|.down. (ProxyImage, RealImage)
+
+ProxyImage -right-> RealImage
+
+@enduml

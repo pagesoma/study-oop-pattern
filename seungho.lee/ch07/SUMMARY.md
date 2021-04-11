@@ -11,9 +11,9 @@
 - [전략(Strategy) 패턴](./strategy.md)
 - [템플릿 메서드(Template Method) 패턴](templatemethod.md)
 - [상태(State) 패턴](./state.md)
-- 데코레이터(Decorator) 패턴
-- 프록시(Proxy) 패턴
-- 어댑터(Adapter) 패턴
+- [데코레이터(Decorator) 패턴](./decorator.md)
+- [프록시(Proxy) 패턴](./proxy.md)
+- [어댑터(Adapter) 패턴](./adapter.md)
 - 옵저버(Observer) 패턴
 - 미디에이터(Mediator) 패턴
 - 파사드(Facade) 패턴

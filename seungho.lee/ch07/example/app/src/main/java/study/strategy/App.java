@@ -44,7 +44,7 @@ public class App {
     int price = cal.calculate(items);
 
     System.out.printf(
-        "total items: %s, price: %d%n",
+        "items: %s, total price: %d%n",
         items.stream().map(Item::getName).collect(Collectors.joining(",")), price);
   }
 }

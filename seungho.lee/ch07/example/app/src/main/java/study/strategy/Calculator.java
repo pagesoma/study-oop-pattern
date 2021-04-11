@@ -5,7 +5,7 @@ import study.strategy.strategy.DiscountStrategy;
 
 public class Calculator {
 
-  private DiscountStrategy discountStrategy;
+  private final DiscountStrategy discountStrategy;
 
   public Calculator(DiscountStrategy discountStrategy) {
     this.discountStrategy = discountStrategy;

@@ -1,0 +1,32 @@
+@startuml
+
+hide footbox
+
+ListUI -> ProxyImage: 1. draw()
+note right
+  ProxyImage 객체의 draw() 메서드가 호출되기 전에는
+  RealImage 객체가 생성되지 않는다. (불필요한 메모리 낭비 방지)
+
+  ListUI 클래스는 이미지가 언제 로딩되는지 알 필요가 없어
+  이미지 로딩 정책을 변경하더라도 ListUI 클래스의 코드는 영향을 받지 않음
+end note
+activate ListUI
+activate ProxyImage
+
+alt image == null
+  create RealImage
+  ProxyImage --> RealImage: 1.1: 객체 생성
+end
+
+ProxyImage -> RealImage: 1.2: draw()
+activate RealImage
+deactivate ProxyImage
+deactivate RealImage
+
+ListUI -> ProxyImage: 2. 두 번째 draw()
+activate ProxyImage
+
+ProxyImage -> RealImage: 2.1: draw()
+activate RealImage
+
+@enduml

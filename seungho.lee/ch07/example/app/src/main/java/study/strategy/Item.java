@@ -1,5 +1,8 @@
 package study.strategy;
 
+import lombok.Getter;
+
+@Getter
 public class Item {
 
   private String name;
@@ -8,13 +11,5 @@ public class Item {
   public Item(String name, int price) {
     this.price = price;
     this.name = name;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public int getPrice() {
-    return price;
   }
 }

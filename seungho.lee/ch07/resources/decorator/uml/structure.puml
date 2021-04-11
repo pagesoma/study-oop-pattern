@@ -1,0 +1,46 @@
+@startuml
+
+class Client {
+}
+
+interface FileOut {
+  +write()
+}
+note top
+  파일 출력 인터페이스
+end note
+
+  abstract class Decorator {
+    -delegate: FileOut
+    +doDelegate()
+  }
+  note left
+    데코레이터를 위한
+    기반 클래스
+  end note
+  class BufferedOut {
+    +write()
+  }
+  class EncryptionOut {
+    +write()
+  }
+  class ZipOut {
+    +write()
+  }
+
+class FileOutImpl
+note top
+  실제 구현
+end note
+
+Client .right.> FileOut
+Decorator .right. FileOutImpl
+FileOut <|.. (Decorator, FileOutImpl)
+
+Decorator <|-down- BufferedOut
+Decorator <|-down- EncryptionOut
+Decorator <|-down- ZipOut
+
+'FileOut <|.. FileOutImpl
+
+@enduml
