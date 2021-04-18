@@ -1,0 +1,24 @@
+@startuml
+
+title 옵저버 패턴의 이해
+
+left to right direction
+
+usecase "StatusChecker"
+note bottom
+  주제 객체.
+  상태를 저장하고 있는 객체.
+end note
+
+rectangle 옵저버 {
+  usecase "EmailSender"
+  usecase "SmsSender"
+  usecase "Messenger"
+}
+
+StatusChecker ..> StatusChecker : 1. 상태 변경 이벤트 발생
+StatusChecker ..> EmailSender : 2. 연락
+StatusChecker ..> SmsSender : 2. 연락
+StatusChecker ..> Messenger : 2. 연락
+
+@enduml

@@ -1,0 +1,41 @@
+@startuml
+
+title 옵저버 패턴의 구조
+
+abstract class StatusSubject {
+  +add(observer: StatusObserver)
+  +remove(observer: StatusObserver)
+  +notifyStatus()
+}
+note top
+  주제
+  (Subject)
+end note
+
+interface StatusObserver {
+  +onAbnormalStatus()
+}
+note top
+  옵저버
+  (Observer)
+end note
+
+class StatusChecker
+
+class StatusEmailSender {
+  +obAbnormalStatus()
+}
+class StatusMessageSender {
+  +obAbnormalStatus()
+}
+note bottom
+  옵저버 콘크리트 클래스
+end note
+
+StatusSubject o-right-> StatusObserver
+StatusChecker -up-|> StatusSubject
+
+StatusEmailSender .up.|> StatusObserver
+StatusMessageSender .up.|> StatusObserver
+
+@enduml

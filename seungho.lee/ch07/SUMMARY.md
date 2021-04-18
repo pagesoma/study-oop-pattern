@@ -14,9 +14,9 @@
 - [데코레이터(Decorator) 패턴](./decorator.md)
 - [프록시(Proxy) 패턴](./proxy.md)
 - [어댑터(Adapter) 패턴](./adapter.md)
-- 옵저버(Observer) 패턴
-- 미디에이터(Mediator) 패턴
-- 파사드(Facade) 패턴
+- [옵저버(Observer) 패턴](./observer.md)
+- [미디에이터(Mediator) 패턴](./mediator.md)
+- [파사드(Facade) 패턴](./facade.md)
 - 추상 팩토리(Abstract Factory) 패턴
 - 컴포지트(Composite) 패턴
 - 널(Null) 객체 패턴
